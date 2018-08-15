@@ -1,0 +1,9 @@
+*~
+CMakeCache.txt
+CMakeFiles/
+CMakeLists.txt~
+CTestTestfile.cmake
+Makefile
+Testing/
+cmake_install.cmake
+deveosTest.log
