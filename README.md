@@ -20,7 +20,7 @@ deveos$ cat Testing/Temporary/LastTest.log # quick check test output
 ## further customization
 * edit ```deveos/build.sh```
 
-#### branch: dev-eosio-fc-submodule branch (example)
+#### *branch*: dev-eosio-fc-submodule branch (example)
 #### submodule of the eosio/fc
 ```
 $ git clone https://github.com/infinidi/deveos.git
@@ -30,7 +30,7 @@ $ git submodule update --init --recursive
 $ EOSIO_EOS_SRC_DIR=/home/infinidi/src/github.com/infinidi/eos BOOST_ROOT_DIR=/home/infinidi/opt/boost ./build.sh
 ```
 
-#### branch: deveos:dev-eosio-fc-submodule, libraries/fc:dev-custom-prefix (example)
+#### *branch*: deveos:dev-eosio-fc-submodule, libraries/fc:dev-custom-prefix (example)
 #### submodule and fc branch that have a custom runner
 see ```libraries/fc/test/crypto/test_deveos_cypher_suite.cpp and CMakeLists.txt files```
 ```
