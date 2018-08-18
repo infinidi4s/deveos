@@ -13,11 +13,18 @@
 #
 # change here to run with ./build.sh only
 #
+DEVEOS_HOME_DIR=$(pwd)
 EOSIO_EOS_SRC_DIR=${EOSIO_EOS_SRC_DIR-/home/infinidi/src/github.com/infinidi/eos}
 BOOST_ROOT_DIR=${BOOST_ROOT_DIR-/home/infinidi/opt/boost}
 
 echo EOSIO_EOS_SRC_DIR=${EOSIO_EOS_SRC_DIR}
 echo BOOST_ROOT_DIR=${BOOST_ROOT_DIR}
+
+##
+## CHECK BRANCHES
+##
+echo -n "root branch: "; git branch -a | grep "*"
+cd libraries/fc; echo -n "fc branch: "; git branch -a | grep "*"; cd -
 
 ##
 ## CMAKE
@@ -41,3 +48,15 @@ cat ./deveosTest.log
 ## CLEAN
 ##
 #make clean
+
+
+##
+## INFO at the end
+##
+echo EOSIO_EOS_SRC_DIR=${EOSIO_EOS_SRC_DIR}
+echo BOOST_ROOT_DIR=${BOOST_ROOT_DIR}
+echo DEVEOS_HOME_DIR=${DEVEOS_HOME_DIR}
+cd ${DEVEOS_HOME_DIR}
+echo -n "DEVEOS branch: "; git branch -a | grep "*"
+cd libraries/fc
+echo -n "FC branch:     "; git branch -a | grep "*"
